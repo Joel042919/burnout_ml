@@ -50,6 +50,7 @@ def predict_burnout(data: BurnoutInput):
     # Convertir los datos recibidos a un DataFrame de Pandas (usando los alias)
     input_data = data.dict(by_alias=True)
     df = pd.DataFrame([input_data])
+    df = df.rename(columns={"Gender": "Gender "})
     
     # Hacer la predicción
     prediction = model_pipeline.predict(df)
