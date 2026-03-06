@@ -71,7 +71,7 @@ def predict_burnout(data: BurnoutInput):
         # Transformar los datos de entrada usando el OneHotEncoder del pipeline
         preprocessor = model_pipeline.named_steps['preprocessor']
         X_transformed = preprocessor.transform(df)
-        feature_names_out = preprocessor.get_feature_names_out()
+        feature_names_out = preprocessor.get_feature_names_out().tolist()
         
         # Extraer el modelo XGBoost y convertir los datos a DMatrix
         xgb_model = model_pipeline.named_steps['classifier']
