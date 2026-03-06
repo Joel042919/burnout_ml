@@ -3,3 +3,5 @@ Raw Data_DIB-Test-Si.xlsx
 train_model.py
 train_model2.py
 modelo/*
+generarDatos.py
+__pycache__/*
