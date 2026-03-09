@@ -59,7 +59,7 @@ def predict_burnout(data: BurnoutInput):
     probability = float(model_pipeline.predict_proba(df)[0][1])
     
     # Definir el umbral de riesgo clínico
-    UMBRAL_RIESGO = 0.60
+    UMBRAL_RIESGO = 0.55
     
     # 3. Determinar la predicción basada en nuestro nuevo umbral
     prediction = 1 if probability >= UMBRAL_RIESGO else 0
